@@ -109,7 +109,23 @@
         85% { color: violet; }
         100% { color: red; }
     }
+
+    /* Keyframes for bounce animation */
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    /* Apply bounce animation to both bakery2.png images */
+    img[src="bakery2.png"] {
+        animation: bounce 2s infinite ease-in-out;
+    }
 </style>
+
 
 
     <div class="hero-image">
