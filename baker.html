@@ -1,4 +1,149 @@
-<marquee> <h1>
-  omer lol
-</h1>
-</marquee>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Menu at Baker's Bakery - Desserts, Juices, and Coffee!">
+    <title>Baker's Bakery - Menu</title>
+    <link rel="shortcut icon" type="x-icon" href="bakery2.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f1e7;
+            color: #6b4f30;
+        }
+
+        header {
+            background-color: #dca15d;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            font-family: 'Georgia', serif;
+            animation: rainbow 3s infinite;
+        }
+
+        @keyframes rainbow {
+            0% { color: #ff5733; }
+            25% { color: #ffb533; }
+            50% { color: #33ff57; }
+            75% { color: #33b5ff; }
+            100% { color: #ff33b5; }
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        section.menu {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 50px 10%;
+            background-color: #f0e1b4;
+            text-align: center;
+        }
+
+        section.menu .category {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 300px;
+            margin: 20px;
+            transition: transform 0.3s;
+        }
+
+        section.menu .category:hover {
+            transform: scale(1.05);
+        }
+
+        section.menu .category img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        section.menu .category img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #dca15d;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.1em;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Baker's Bakery Menu</h1>
+        <p>Choose from our delightful collection of desserts, juices, and coffee.</p>
+    </header>
+
+    <section class="menu">
+        <!-- Main Desserts Section -->
+        <div class="category">
+            <h2>Main Desserts</h2>
+            <img src="bakers.jpg" alt="Chocolate Cake">
+            <h3>Velvet Chocolate Cake</h3>
+            <p>A rich, moist chocolate cake covered with velvety frosting.</p>
+        </div>
+
+        <!-- Juices Section -->
+        <div class="category">
+            <h2>Juices</h2>
+            <img src="orange-juice.jpg" alt="Fresh Orange Juice">
+            <h3>Fresh Orange Juice</h3>
+            <p>Freshly squeezed orange juice, the perfect refreshment for any time of day.</p>
+        </div>
+
+        <!-- Coffee Section -->
+        <div class="category">
+            <h2>Coffee</h2>
+            <img src="coffee.jpg" alt="Cappuccino">
+            <h3>Cappuccino</h3>
+            <p>Freshly brewed coffee topped with smooth frothed milk.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Baker's Bakery - All Rights Reserved</p>
+        <a href="index.html">Home</a> | <a href="#">Menu</a> | <a href="#">Contact</a>
+    </footer>
+
+</body>
+</html>
