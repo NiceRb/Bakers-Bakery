@@ -27,15 +27,6 @@
             font-size: 3em;
             margin: 0;
             font-family: 'Georgia', serif;
-            animation: rainbow 3s infinite;
-        }
-
-        @keyframes rainbow {
-            0% { color: #ff5733; }
-            25% { color: #ffb533; }
-            50% { color: #33ff57; }
-            75% { color: #33b5ff; }
-            100% { color: #ff33b5; }
         }
 
         header p {
@@ -47,6 +38,11 @@
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
         }
 
         section.menu {
@@ -63,7 +59,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 30px;
-            width: 300px;
+            width: 250px;
             margin: 20px;
             transition: transform 0.3s;
         }
@@ -76,11 +72,20 @@
             width: 100%;
             height: auto;
             border-radius: 8px;
-            transition: transform 0.3s;
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-50px); /* More intense bounce */
+            }
         }
 
         section.menu .category img:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         footer {
@@ -100,11 +105,6 @@
         footer a:hover {
             text-decoration: underline;
         }
-
-        @keyframes slideIn {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(0); }
-        }
     </style>
 </head>
 <body>
@@ -118,9 +118,39 @@
         <!-- Main Desserts Section -->
         <div class="category">
             <h2>Main Desserts</h2>
-            <img src="bakers.jpg" alt="Chocolate Cake">
+            <img src="bakers.jpg" alt="Velvet Chocolate Cake">
             <h3>Velvet Chocolate Cake</h3>
             <p>A rich, moist chocolate cake covered with velvety frosting.</p>
+        </div>
+
+        <div class="category">
+            <img src="blueberry-cake.jpg" alt="Blueberry Cake">
+            <h3>Blueberry Cheesecake</h3>
+            <p>A tangy, creamy cheesecake with a rich blueberry topping.</p>
+        </div>
+
+        <div class="category">
+            <img src="red-velvet-cake.jpg" alt="Red Velvet Cake">
+            <h3>Red Velvet Cake</h3>
+            <p>Classic red velvet cake with a luscious cream cheese frosting.</p>
+        </div>
+
+        <div class="category">
+            <img src="tiramisu.jpg" alt="Tiramisu">
+            <h3>Tiramisu</h3>
+            <p>Layers of espresso-soaked ladyfingers, mascarpone, and cocoa.</p>
+        </div>
+
+        <div class="category">
+            <img src="lemon-cake.jpg" alt="Lemon Cake">
+            <h3>Classic Lemon Cake</h3>
+            <p>A tangy, zesty lemon cake topped with a light frosting.</p>
+        </div>
+
+        <div class="category">
+            <img src="chocolate-muffins.jpg" alt="Chocolate Muffins">
+            <h3>Chocolate Muffins</h3>
+            <p>Rich chocolate muffins that melt in your mouth.</p>
         </div>
 
         <!-- Juices Section -->
@@ -131,13 +161,74 @@
             <p>Freshly squeezed orange juice, the perfect refreshment for any time of day.</p>
         </div>
 
+        <div class="category">
+            <img src="apple-juice.jpg" alt="Apple Juice">
+            <h3>Apple Juice</h3>
+            <p>Refreshing apple juice made from hand-picked apples.</p>
+        </div>
+
+        <div class="category">
+            <img src="carrot-juice.jpg" alt="Carrot Juice">
+            <h3>Carrot Juice</h3>
+            <p>A nutritious and refreshing juice made with fresh carrots.</p>
+        </div>
+
+        <div class="category">
+            <img src="watermelon-juice.jpg" alt="Watermelon Juice">
+            <h3>Watermelon Juice</h3>
+            <p>Sweet and hydrating watermelon juice to cool you off.</p>
+        </div>
+
+        <div class="category">
+            <img src="mango-juice.jpg" alt="Mango Juice">
+            <h3>Mango Juice</h3>
+            <p>Fresh, tropical mango juice with a smooth finish.</p>
+        </div>
+
+        <div class="category">
+            <img src="pineapple-juice.jpg" alt="Pineapple Juice">
+            <h3>Pineapple Juice</h3>
+            <p>A refreshing pineapple juice with a tangy twist.</p>
+        </div>
+
         <!-- Coffee Section -->
         <div class="category">
             <h2>Coffee</h2>
-            <img src="coffee.jpg" alt="Cappuccino">
-            <h3>Cappuccino</h3>
-            <p>Freshly brewed coffee topped with smooth frothed milk.</p>
+            <img src="coffee1.jpg" alt="Espresso">
+            <h3>Espresso</h3>
+            <p>A strong and rich coffee shot with a smooth finish.</p>
         </div>
+
+        <div class="category">
+            <img src="cappuccino.jpg" alt="Cappuccino">
+            <h3>Cappuccino</h3>
+            <p>Freshly brewed coffee topped with frothy steamed milk.</p>
+        </div>
+
+        <div class="category">
+            <img src="latte.jpg" alt="Latte">
+            <h3>Latte</h3>
+            <p>A smooth blend of espresso and steamed milk with a light foam.</p>
+        </div>
+
+        <div class="category">
+            <img src="mocha.jpg" alt="Mocha">
+            <h3>Mocha</h3>
+            <p>Rich chocolate and coffee combined into a perfect mocha.</p>
+        </div>
+
+        <div class="category">
+            <img src="macchiato.jpg" alt="Macchiato">
+            <h3>Macchiato</h3>
+            <p>Espresso with a dash of steamed milk, perfect for coffee lovers.</p>
+        </div>
+
+        <div class="category">
+            <img src="americano.jpg" alt="Americano">
+            <h3>Americano</h3>
+            <p>Classic black coffee made by diluting espresso with hot water.</p>
+        </div>
+
     </section>
 
     <footer>
